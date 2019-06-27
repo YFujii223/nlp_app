@@ -1,5 +1,6 @@
 from flask import request, redirect, url_for, render_template, flash, session
 from flask_app import app
+import MeCab as mc
 
 
 @app.route('/')
