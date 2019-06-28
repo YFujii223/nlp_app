@@ -90,6 +90,7 @@ def show_entries():
 @app.route('/outcome', methods = ['GET', 'POST'])
 def outcome():
     # model = models.Doc2Vec.load('/Users/fujii.yuki/.ghq/src/github.com/projects/nlp_app/flask_app/aozora.model')
-    title="夏目 漱石:一夜"
-    n_outcome = similar(title, "https://www.aozora.gr.jp/cards/000148/files/1086_ruby_5742.zip")
+    title = request.form['title']
+    url = request.form['url']
+    n_outcome = similar(title, url)
     return render_template('outcome.html', title=title, n_outcome=n_outcome)
