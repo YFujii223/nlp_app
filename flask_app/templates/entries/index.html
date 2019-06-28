@@ -2,15 +2,15 @@
 {% block body %}
 <form action="/outcome" method=post>
 <div class="form-group">
-    <label for="InputTitle">ユーザ名</label>
+    <label for="InputTitle">著者名と書籍名</label>
     <input type="text" class="form-control" id="InputTitle" name=username>
     </div>
 
     <div class="form-group">
-    <label for="InputPassword">パスワード</label>
+    <label for="InputPassword">青空文庫のURL</label>
     <input type="password" class="form-control" id="InputPassword" name=password>
     </div>
 
-    <button type="submit" class="btn btn-primary">テキストを入力</button>
+    <button type="submit" class="btn btn-primary">結果を見る</button>
     </form>
 {% endblock %}
